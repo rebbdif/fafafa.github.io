@@ -8,7 +8,7 @@
     }
     body {
         background: linear-gradient(to bottom, #123, #234);
-        color: #fff;
+        color: #fffff;
         font: 18px Cousine, Menlo, Monaco, monospace;
     }
     #timer {
@@ -17,30 +17,6 @@
         text-align: center;
         line-height: 90vh;
         font-size: 240px;
-    }
-    #control {
-        position: fixed;
-        top: 30px; left: 30px;
-        background: #353433;
-        border: 2px solid #656463;
-        opacity: 1;
-        transition: 0.1s opacity;
-    }
-    #control button {
-        background: #000;
-        border: 1px solid #555453;
-        padding: 4px;
-        margin: 2px;
-        color: #4f4;
-        font-family: inherit;
-        font-size: 20px;
-    }
-    .controls-hidden #timer {
-        cursor: none;
-    }
-    .controls-hidden #control {
-        opacity: 0;
-        pointer-events: none;
     }
 </style>
 <body>
@@ -64,7 +40,7 @@
         document.body.classList.toggle('controls-hidden')
     }
     function update() {
-        var timeLeft = endTime - Date.now()
+        var timeLeft = 15 * 60e3
         if (timeLeft < 0) {
             setText('--:--')
         } else {
