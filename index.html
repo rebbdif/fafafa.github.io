@@ -49,6 +49,7 @@
             setText(`${minutes}:${seconds.toString(10).padStart(2, '0')}`)
         }
     }
+    window.onload = update;
     function setText(text) {
         document.getElementById('timer').textContent = text
     }
